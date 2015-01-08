@@ -20,5 +20,8 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+# Feeds - everything set to none to avoid generating feeds
+FEED_ALL_ATOM = ''
+
+# Theme For Production
+THEME = 'spanish-tuition-pelican-theme/Output_Production'

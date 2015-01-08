@@ -1,4 +1,10 @@
+*.swp
+*.sublime-*
 *.pyc
+spanish-tuition-pelican-theme/Assets/bower_components/*
+spanish-tuition-pelican-theme/Assets/temp/*
+spanish-tuition-pelican-theme/node_modules
+spanish-tuition-pelican-theme/Output*
 feeds
 output
 cache

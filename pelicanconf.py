@@ -34,5 +34,14 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+# Feeds - everything set to none to avoid generating feeds
+FEED_ALL_ATOM = ''
+
+# Prevent default pages from being generated - its not necessary for this site
+ARCHIVES_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
+TAGS_SAVE_AS = ''
+
 # Theme
-THEME = '../web-site/spanish_tuition/Output'
+THEME = 'spanish-tuition-pelican-theme/Output'

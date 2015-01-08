@@ -1,0 +1,116 @@
+//==Common
+//
+//
+
+//This section houses all common styling
+
+//== DOM Selectors
+//
+//## Standard DOM selector styles
+
+html { //Very important - setting this as 100% allows the front splash image to span the screen
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	position: relative;
+	height: inherit;
+	width: inherit;
+  	color: @text-color;
+  	background-color: #fff;
+  	-webkit-overflow-scrolling:touch;
+}
+
+a {
+	color: @text-color;
+	border-bottom: 1px dotted @text-color;
+
+	&:hover {
+		color: @link-color-hover;
+		border-bottom: 1px dotted @link-color-hover;
+		text-decoration: none;
+	}
+
+	&:hover, &:active, &:focus {
+		outline: none;
+	}
+}
+
+//Make any DOM node a link
+.link:extend(a) {
+	&:hover {
+		&:extend(a:hover);
+	}
+	
+	&:hover, &:active, &:focus {
+		outline: none;
+	}
+}
+
+h2 {
+	@media (min-width: @screen-sm) {
+		font-size: 3em;
+	}	
+}
+
+//== Element IDs
+//
+//## ID related styles
+
+#connect {
+	background-color: #F2F3F5;
+}
+
+#footer {
+	padding-top: 3em;
+	padding-bottom: 1em;
+}
+
+#about, #adults, #corporate, #children, #contact, #teens {
+	@media (min-height: 700px) {
+		.vertical-align();
+	}
+	
+	margin-top: 5px;	
+	background: linear-gradient(0deg,#FFF,#f6f9f9);
+}
+
+//== Hacks
+//
+//The easiest way to
+//make twitter bootstrap render the 
+//intro correctly for phone in portrait
+//and in landscape. Note: The breakpoint
+//applies to a phone in portrait
+.phone-portrait-display {
+	@media (max-width: 360px) and (max-height: 640px), (max-width: 604px) and (max-height: 966px) {
+		margin-left: 25%;
+		width: 50%;
+	}
+
+	//Iphone 4 and 5
+	@media (max-width: 320px) and (max-height: 480px), (max-width: 480px) and (max-height: 320px), (max-width: 568px) and (max-height: 320px) {
+		display: block;
+		float: left;
+		width: 50%;
+		margin-left: 0px;
+		a {
+			line-height: 2.5em;
+		}
+	}
+}
+
+//== Common
+//
+//
+.divider-grey {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 50px;
+    border-top: 2px solid #b3b3b1;
+    padding-bottom: 2.3em;
+}
