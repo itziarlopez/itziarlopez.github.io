@@ -45,3 +45,10 @@ TAGS_SAVE_AS = ''
 
 # Theme
 THEME = 'spanish-tuition-pelican-theme/Output'
+
+# Static Paths/Files
+STATIC_PATHS = ['images','static/robots.txt', 'static/CNAME']
+EXTRA_PATH_METADATA = {
+        'static/robots.txt': {'path': 'robots.txt'},
+        'static/CNAME': {'path': 'CNAME'},
+}
