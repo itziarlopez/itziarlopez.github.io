@@ -15,7 +15,7 @@ $(function() {
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'jswing');
-        //event.preventDefault();
+        event.preventDefault();
     });
 
     //JavaScript to make navbar auto-collapse on mobile

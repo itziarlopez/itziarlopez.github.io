@@ -9,4 +9,4 @@ feeds
 output
 cache
 theme
-*.html
+./*.html
