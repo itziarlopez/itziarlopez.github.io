@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Itziar Lopez'
 SITENAME = u'Spanish Tuition In Vancouver'
-SITEURL = u'http://spanishtuition.ca'
+SITEURL = u'http://spanishtuition-local'
 
 PATH = 'content'
 
