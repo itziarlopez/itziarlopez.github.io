@@ -25,3 +25,23 @@ FEED_ALL_ATOM = ''
 
 # Theme For Production
 THEME = 'spanish-tuition-pelican-theme/Output_Production'
+
+# Plugins 
+PLUGINS = [
+    'sitemap'
+]
+
+# Sitemap Plugin
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.75,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'weekly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}

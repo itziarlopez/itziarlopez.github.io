@@ -74,6 +74,10 @@ clean:
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
+sitemaps:
+	curl www.google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fspanishtuition.ca%2Fsitemap.xml > /dev/null 2>&1
+	curl www.bing.com/webmaster/ping.aspx?siteMap=http%3A%2F%2Fspanishtuition.ca%2Fsitemap.xml > /dev/null 2>&1
+
 serve:
 ifdef PORT
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
@@ -114,7 +118,7 @@ s3_upload: publish
 cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
-github: publish
+github: publish sitemaps
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 

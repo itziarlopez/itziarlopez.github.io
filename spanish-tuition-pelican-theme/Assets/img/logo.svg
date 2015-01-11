@@ -7,12 +7,41 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="180"
    height="180"
-   id="svg2">
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/baz/Personal/Web/itziarlopez.github.io/spanish-tuition-pelican-theme/Assets/img/logo.png"
+   inkscape:export-xdpi="8"
+   inkscape:export-ydpi="8">
   <defs
      id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="82.32464"
+     inkscape:cy="131.11814"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="1431"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -26,32 +55,38 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-177.85715,-95.576462)"
-     id="layer1">
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-177.85715,-95.576462)">
     <rect
+       style="fill:#5cc8f9;fill-opacity:1;stroke:none"
+       id="rect3775"
        width="180"
        height="180"
-       ry="38.57143"
        x="177.85715"
        y="95.576462"
-       id="rect3775"
-       style="fill:#5cc8f9;fill-opacity:1;stroke:none" />
+       ry="38.57143" />
     <text
+       xml:space="preserve"
+       style="font-size:54.91831589px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="195.23787"
        y="221.5603"
        id="text3779"
-       xml:space="preserve"
-       style="font-size:54.91831589px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3781"
          x="195.23787"
          y="221.5603"
-         id="tspan3781"
          style="font-size:98.85297394px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Sans;-inkscape-font-specification:Sans Bold">ST</tspan></text>
     <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="545.5957"
        y="170.21931"
        id="text3787"
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
          x="545.5957"
          y="170.21931"
          id="tspan3791"

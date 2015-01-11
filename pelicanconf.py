@@ -52,3 +52,9 @@ EXTRA_PATH_METADATA = {
         'static/robots.txt': {'path': 'robots.txt'},
         'static/CNAME': {'path': 'CNAME'},
 }
+
+# Plugin Paths
+PLUGIN_PATHS = [
+    '../pelican-plugins'
+]
+
