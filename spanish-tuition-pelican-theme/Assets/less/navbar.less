@@ -69,6 +69,9 @@ a.navbar-brand {
 		background-color: rgba(255, 255, 255, 0.8);
 		color: #000;
 		font-weight: 700;
+		border-radius: 0 0 5% 5%;
+		border: 0px @text-color solid;
+		border-bottom-width: 1px;
 	}
 }
 
@@ -76,9 +79,6 @@ a.navbar-brand {
 //top navbar that results when someone scrolls
 //down
 .top-navbar-collapse {
-	background-color: rgba(230, 230, 230, 0.9);
-	transition: all 0.5s ease-in-out;
-
 	& i.fa.fa-bars {
 		color: inherit;
 	}
@@ -96,5 +96,17 @@ a.navbar-brand {
 			color: @link-color-hover;
 			border: none;
 		}
-    }
+    }	
+
+	@media (min-width: @grid-float-breakpoint) {
+		background-color: rgba(230, 230, 230, 0.9);
+		transition: background-color 0.5s ease-in-out;
+	}
+
+	@media (max-width: (@grid-float-breakpoint - 1px)) {
+		div.navbar-header {
+			background-color: rgba(230, 230, 230, 0.9);
+			transition: background-color 0.5s ease-in-out;
+		}
+	}
 }
