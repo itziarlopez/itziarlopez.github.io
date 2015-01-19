@@ -2,6 +2,30 @@
 //
 //
 
+//
+// Mixin to invert the navbar
+//
+.navbar-invert() {
+	& i.fa.fa-bars {
+		color: inherit;
+	}
+
+    & a.navbar-brand {
+    	color: #000;
+    	&:hover {color: @link-color-hover;}
+    }
+
+    & li a {
+    	background: none;
+    	color: #000;
+		& span:focus,
+		& span:hover {
+			color: @link-color-hover;
+			border: none;
+		}
+    }	
+}
+
 a.navbar-brand {
 	border: none;
 	color: #fff;
@@ -28,7 +52,7 @@ a.navbar-brand {
 		color: #fff;
 	}
 
-	@media (min-width: @screen-sm) {
+	@media (min-width: @grid-float-breakpoint) {
 		font-family: 'Montserrat', sans-serif;
 		letter-spacing: 1px;
 		padding: 1.0em 0;
@@ -59,12 +83,16 @@ a.navbar-brand {
 		    }
 		}
 	}
+
+	.navbar-header {
+		@media (max-width: (@grid-float-breakpoint - 1px)) {
+			.navbar-invert();
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+	}
 }
 
-//This is for the mobile menu - it needs to
-//have its background set to a color so that
-//text items can be read
-.navbar-collapse {
+.navbar-main-collapse {
 	@media (max-width: (@grid-float-breakpoint - 1px)) {
 		background-color: rgba(255, 255, 255, 0.8);
 		color: #000;
@@ -75,38 +103,14 @@ a.navbar-brand {
 	}
 }
 
+
 //Workings in conjunction with navbar.js - the
 //top navbar that results when someone scrolls
 //down
 .top-navbar-collapse {
-	& i.fa.fa-bars {
-		color: inherit;
-	}
-
-    & a.navbar-brand {
-    	color: #000;
-    	&:hover {color: @link-color-hover;}
-    }
-
-    & li a {
-    	background: none;
-    	color: #000;
-		& span:focus,
-		& span:hover {
-			color: @link-color-hover;
-			border: none;
-		}
-    }	
-
 	@media (min-width: @grid-float-breakpoint) {
+		.navbar-invert();
 		background-color: rgba(230, 230, 230, 0.9);
 		transition: background-color 0.5s ease-in-out;
-	}
-
-	@media (max-width: (@grid-float-breakpoint - 1px)) {
-		div.navbar-header {
-			background-color: rgba(230, 230, 230, 0.9);
-			transition: background-color 0.5s ease-in-out;
-		}
 	}
 }
