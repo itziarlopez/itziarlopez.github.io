@@ -21,7 +21,7 @@
 		& span:focus,
 		& span:hover {
 			color: @link-color-hover;
-			border: none;
+			border: 0;
 		}
     }	
 }
@@ -84,10 +84,12 @@ a.navbar-brand {
 		}
 	}
 
-	.navbar-header {
+	//Used in mobile when menu is dropped down
+	.dropdown-menu {
 		@media (max-width: (@grid-float-breakpoint - 1px)) {
 			.navbar-invert();
 			background-color: rgba(255, 255, 255, 0.8);
+			transition: background-color 0.5s ease-in-out;
 		}
 	}
 }
@@ -100,6 +102,10 @@ a.navbar-brand {
 		border-radius: 0 0 5% 5%;
 		border: 0px @text-color solid;
 		border-bottom-width: 1px;
+
+		& li a {
+			border: 0;
+		}
 	}
 }
 
@@ -108,8 +114,16 @@ a.navbar-brand {
 //top navbar that results when someone scrolls
 //down
 .top-navbar-collapse {
+	.navbar-invert();
+	
+	@media (max-width: (@grid-float-breakpoint - 1px)) {
+		.navbar-header {
+			background-color: rgba(255, 255, 255, 0.8);
+			transition: background-color 0.5s ease-in-out;
+		}
+	}
+	
 	@media (min-width: @grid-float-breakpoint) {
-		.navbar-invert();
 		background-color: rgba(230, 230, 230, 0.9);
 		transition: background-color 0.5s ease-in-out;
 	}

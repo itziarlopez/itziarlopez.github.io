@@ -21,4 +21,12 @@ $(function() {
         }, 1500, 'jswing');
         event.preventDefault();
     });
+
+    //Will toggle the class for the navbar-header
+    //so that when in mobile, if the drop down menu
+    //is activated, the navbar's background color will
+    //change
+    $("#dropdown-menu").on('click', function() {
+        $("#navbar-header").toggleClass("dropdown-menu");
+    });
 })
