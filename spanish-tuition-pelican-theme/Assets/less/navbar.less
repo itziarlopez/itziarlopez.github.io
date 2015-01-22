@@ -36,7 +36,8 @@ a.navbar-brand {
 
 	span:before {
 		@media (max-width: (@grid-float-breakpoint - 1px)), (min-width: 1000px) {
-			content: "spanishtuition.ca";
+			content: "spanishtuition";
+			font-size: 0.95em;
 		}
 
 		@media (min-width: 1200px) {
@@ -50,6 +51,12 @@ a.navbar-brand {
 
 	& i.fa.fa-bars {
 		color: #fff;
+	}
+
+	@media (min-width: @grid-float-breakpoint) and (max-width: 1000px) {
+		ul.nav.navbar-nav {
+			font-size: 0.89em;
+		}
 	}
 
 	@media (min-width: @grid-float-breakpoint) {

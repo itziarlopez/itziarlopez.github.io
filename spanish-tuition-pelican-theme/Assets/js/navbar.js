@@ -10,7 +10,7 @@ $(function() {
     });
 
     //jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a[href=#page-top], a[href=#corporate], a[href=#about], a[href=#adults], a[href=#teens], a[href=#children], a[href=#contact]').bind('click', function(event) {
+    $('a[href=#page-top], a[href=#corporate], a[href=#about], a[href=#adults], a[href=#teens], a[href=#children], a[href=#contact], a[href=#price]').bind('click', function(event) {
         //Make navbar auto-collapse on mobile
         if ($('.navbar-toggle').is(':visible') && $('.navbar-main-collapse').is(':visible'))
             $('.navbar-toggle').click();
