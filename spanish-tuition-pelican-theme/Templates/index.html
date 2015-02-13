@@ -21,6 +21,9 @@ Spanish Lessons To Individuals And Groups
     <li>
         <a href="#children"><span>Children</span></a>
     </li>
+    <li>
+        <a href="#price"><span>Price</span></a>
+    </li>
 	{{ super() }}
 {% endblock %}
 
@@ -32,19 +35,22 @@ Spanish Lessons To Individuals And Groups
                 <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                     <div class="brand-heading">
                         <h1 class="brand-heading">Learn Spanish In Vancouver</h1>
-                        <p class="hidden-xs">Private Spanish tuition to individuals and groups</p>
+                        <div style="display:inline-block">
+                            <img src="theme/img/apple-touch-icon-144-precomposed.png" style="height: 3.0em; float: left; padding-right: 1.0em;" />
+                            <p style="display:inline-block" id="message"></p>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-3 phone-portrait-display page-scroll">
+                        <div class="col-xs-6 col-sm-3">
                             <a href="#corporate" class="btn btn-block btn-intro">Corporations</a>
                         </div>
-                        <div class="col-xs-3 phone-portrait-display page-scroll">
+                        <div class="col-xs-6 col-sm-3">
                             <a href="#adults" class="btn btn-block btn-intro">Adults</a>
                         </div>
-                        <div class="col-xs-3 phone-portrait-display page-scroll">
+                        <div class="col-xs-6 col-sm-3">
                             <a href="#teens" class="btn btn-block btn-intro">Teens</a>
                         </div>
-                        <div class="col-xs-3 phone-portrait-display page-scroll">
+                        <div class="col-xs-6 col-sm-3">
                             <a href="#children" class="btn btn-block btn-intro">Children</a>
                         </div>
                     </div>
@@ -77,12 +83,20 @@ Spanish Lessons To Individuals And Groups
                                 <img src="theme/img/me.jpg" alt="Itziar Lopez" class="img-responsive img-circle" style="margin-left:auto; margin-right:auto;"/>
                             </div>
                             <div class="col-md-9 col-md-height col-middle text-left" style="padding-top: 1em;">
-                                <p>
-                                    Hi, I'm Itziar and I am passionate about Spanish. I come from the city of <a href="http://en.wikipedia.org/wiki/Pamplona" target="_blank">Pamplona</a> in Spain where I gained experience in teaching both adults and children. I now live in beautiful Vancouver where I have been teaching Spanish to children in kindergarten all the way up to adults who have retired.
-                                </p>
-                                <p>
-                                    I will help and motivate you to master Spanish! I have been doing this for years and along the way, I have collected the best materials to help you learn Spanish. From conducting business in Spanish to teaching little children, I am excited to be your personal teacher.
-                                </p>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>
+                                            Hi, I'm Itziar and I am passionate about Spanish. I come from the city of <a href="http://en.wikipedia.org/wiki/Pamplona" target="_blank">Pamplona</a> in Spain where I gained experience in teaching both adults and children. I now live in beautiful Vancouver where I have been teaching Spanish to children in kindergarten all the way up to adults who have retired.
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12" id ="firstlesson">
+                                        <h3>My Teaching Method</h3>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <p>I customize lessons according to my student's personal needs. My objective is that my students start using Spanish from the <stong>first lesson</strong>. How do I do this? <a href="#price">By determining my student's goals and assessing their level to design a personal study programme</a>. The key to my student's success is good planning and communication.</p>
+                                        <p>As someone that has learnt both English and French as foreign languages, I understand your fears, hopes and frustrations. I will help you overcome these challenges.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -236,6 +250,62 @@ Spanish Lessons To Individuals And Groups
         </div>
     </section>
 
+    <section id="price" class="text-center">
+        <div class="container content">
+           <div class="row">
+                <h2>Price</h2>
+                <div class="col-xs-12">
+                    <div class="divider-grey"></div>
+                </div>
+                <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                    <div style="margin-bottom: 1.0em;"><p style="text-align: center">I <strong>do not charge</strong> for the <a href="#firstlesson">first lesson!</a></p></div>
+                    <div style="margin-bottom: 1.0em;"><p style="text-align: center">My prices are not set in stone, but the tables below is what I generally charge</p></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="table-block">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" class="text-center">Individual Rates</th>
+                                        <tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td rowspan="3" class="rowspan">I will travel to you</td><td><strong>$30</strong> 60 minutes</td></tr>
+                                        <tr><td><strong>$40</strong> 90 minutes</td></tr>
+                                        <tr><td><strong>$50</strong> 120 minutes</td></tr>
+                                        <tr><td class="rowspan" rowspan="3">At the <a href="https://www.google.ca/maps/place/Vancouver+Public+Library+-+Central+Branch/@49.279754,-123.115679,17z/data=!3m1!4b1!4m7!1m4!3m3!1s0x5486717e9849da43:0xb9df0be6adeff97b!2sVancouver+Public+Library+-+Central+Branch!3b1!3m1!1s0x5486717e9849da43:0xb9df0be6adeff97b?hl=en" target="_blank">central library</a></td><td><strong>$20</strong> 60 minutes</td></tr>
+                                        <tr><td><strong>$30</strong> 90 minutes</td></tr>
+                                        <tr style="border-bottom: 1px;"><td><strong>$40</strong> 120 minute</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="table-block">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" class="text-center">Group Rates Per Person<br>Where No Travel Is Needed</th>
+                                        <tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>2 to 3 students</td><td><strong>$15</strong> per hour</td></tr>
+                                        <tr><td>4 to 5 students</td><td><strong>$12</strong> per hour</td></tr>
+                                        <tr><td>6 students</td><td><strong>$10</strong> per hour</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 page-scroll">
+                            <div class="divider-grey"></div>
+                            <p style="text-align: center">For more information, please make <a href="#contact">contact</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="text-center">
         <div class="container content">
             <h2>Contact</h2>
@@ -244,12 +314,6 @@ Spanish Lessons To Individuals And Groups
                     <div class="row">
                         <div class="col-md-12">
                             <div class="divider-grey"></div>
-                        </div>
-                        <div class="col-md-12" id="price">
-                            <h3>Price</h3>
-                            <div class="text-center">
-                                My usual rate is <b>$30</b> an hour. Group discounts are available. <u>I do not charge for the first lesson</u> and I am also able to teach over Skype.
-                            </div>
                         </div>
                         <div class="col-md-12" style="padding-bottom: 1.0em;">
                         </div>

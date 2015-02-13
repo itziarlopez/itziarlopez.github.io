@@ -60,6 +60,17 @@ h2 {
 //
 //## ID related styles
 
+#message {
+	&:before {
+		@media (max-width: @screen-sm) {
+			content: "Private Spanish Tuition";
+		}
+		@media (min-width: @screen-sm) {
+			content: "Private Spanish tuition to individuals and groups";
+		}
+	}
+}
+
 #connect {
 	background-color: #F2F3F5;
 }
@@ -69,38 +80,13 @@ h2 {
 	padding-bottom: 1em;
 }
 
-#about, #adults, #corporate, #children, #contact, #teens {
+#about, #adults, #corporate, #children, #contact, #teens, #price {
 	@media (min-height: 700px) {
 		.vertical-align();
 	}
 	
 	margin-top: 5px;	
 	background: linear-gradient(0deg,#FFF,#f6f9f9);
-}
-
-//== Hacks
-//
-//The easiest way to
-//make twitter bootstrap render the 
-//intro correctly for phone in portrait
-//and in landscape. Note: The breakpoint
-//applies to a phone in portrait
-.phone-portrait-display {
-	@media (max-width: 360px) and (max-height: 640px), (max-width: 604px) and (max-height: 966px) {
-		margin-left: 25%;
-		width: 50%;
-	}
-
-	//Iphone 4 and 5
-	@media (max-width: 320px) and (max-height: 480px), (max-width: 480px) and (max-height: 320px), (max-width: 568px) and (max-height: 320px) {
-		display: block;
-		float: left;
-		width: 50%;
-		margin-left: 0px;
-		a {
-			line-height: 2.5em;
-		}
-	}
 }
 
 //== Common
