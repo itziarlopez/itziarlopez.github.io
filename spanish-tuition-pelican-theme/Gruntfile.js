@@ -50,13 +50,13 @@ module.exports = function(grunt) {
             css: {
                  files: [
                     {expand: true, cwd: "<%= globalConfig.temp %>", src: ['css/**'], dest: '<%= globalConfig.output %>/static/', filter: 'isFile'},
-                ]               
+                ]
             },
 
             js: {
                  files: [
                     {expand: true, cwd: "<%= globalConfig.temp %>", src: ['js/**'], dest: '<%= globalConfig.output %>/static/', filter: 'isFile'},
-                ]               
+                ]
             }
         },
 
@@ -102,13 +102,15 @@ module.exports = function(grunt) {
         //Concat
         concat: {
             js: {
-                src: [  
+                src: [
                     "<%= globalConfig.bower_components %>/bootstrap/js/transition.js",
                     "<%= globalConfig.bower_components %>/bootstrap/js/collapse.js",
                     "<%= globalConfig.bower_components %>/bootstrap/js/scrollspy.js",
+                    "<%= globalConfig.bower_components %>/bootstrap/js/carousel.js",
                     "<%= globalConfig.bower_components %>/jquery.easing/js/jquery.easing.js",
                     "<%= globalConfig.assets %>/js/navbar.js",
-                    "<%= globalConfig.assets %>/js/spamhide.js"
+                    "<%= globalConfig.assets %>/js/spamhide.js",
+                    "<%= globalConfig.assets %>/js/carousel-normalize.js"
                 ],
                 dest: "<%= globalConfig.temp %>/js/main.js"
             }
@@ -130,20 +132,20 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-auto-install');
-    grunt.loadNpmTasks('grunt-contrib-cssmin'); 
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.registerTask('set-global-config-production',' Sets the global config for production', function(name, val) {
         globalConfig[name] = val;
     });
 
     grunt.registerTask('default', [
-        'auto_install', 
+        'auto_install',
         'clean:output',
         'clean:temp',
         'copy:theme',
         'copy:images',
-        'copy:bootstrap', 
-        'less:all', 
+        'copy:bootstrap',
+        'less:all',
         'autoprefixer',
         'copy:css',
         'concat',
@@ -153,16 +155,16 @@ module.exports = function(grunt) {
     //Production - minimizes both CSS and JavaScript
     grunt.registerTask('production', [
         'set-global-config-production:output:Output_Production',
-        'auto_install', 
+        'auto_install',
         'clean:output',
         'clean:temp',
-        'copy:theme', 
+        'copy:theme',
         'copy:images',
         'copy:bootstrap',
         'less:all',
         'autoprefixer',
-        'cssmin', 
-        'concat', 
+        'cssmin',
+        'concat',
         'uglify',
     ]);
 };
