@@ -11,6 +11,7 @@ $(function() {
         tallest = Math.max.apply(null, heights); //cache largest value
         items.each(function() {
             $(this).css('min-height',tallest + 'px');
+            $(this).find('.table').css('min-height',tallest + 'px');
         });
     };
 
@@ -19,7 +20,8 @@ $(function() {
     $(window).on('resize orientationchange', function () {
         tallest = 0, heights.length = 0; //reset vars
         items.each(function() {
-            $(this).css('min-height','0'); //reset min-height
+            $(this).css('min-height','0');
+            $(this).find('.table').css('min-height','0');
         });
         normalizeHeights(); //run it again
     });
