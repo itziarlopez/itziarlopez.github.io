@@ -22,4 +22,9 @@
 	    color: #FFF;
 		background: @link-color-hover;
 	}
+
+	&:focus, &:active {
+		&:extend(.btn-intro);
+		box-shadow: none;
+	}
 }
