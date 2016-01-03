@@ -1,5 +1,5 @@
 $(function() {
-    
+
     //jQuery to collapse the navbar on scroll
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 0) {
@@ -17,7 +17,7 @@ $(function() {
 
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).offset().top - 80 // 70 pixesl for top navbar offset
         }, 1500, 'jswing');
         event.preventDefault();
     });

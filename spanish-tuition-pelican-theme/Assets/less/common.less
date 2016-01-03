@@ -28,32 +28,24 @@ a {
 	color: @text-color;
 	border-bottom: 1px dotted @text-color;
 
-	&:hover {
+	&:hover, &:active, &:focus {
 		color: @link-color-hover;
 		border-bottom: 1px dotted @link-color-hover;
 		text-decoration: none;
-	}
-
-	&:hover, &:active, &:focus {
-		outline: none;
 	}
 }
 
 //Make any DOM node a link
 .link:extend(a) {
-	&:hover {
-		&:extend(a:hover);
-	}
-	
 	&:hover, &:active, &:focus {
-		outline: none;
+		&:extend(a:hover);
 	}
 }
 
 h2 {
 	@media (min-width: @screen-sm) {
 		font-size: 3em;
-	}	
+	}
 }
 
 //== Element IDs
@@ -84,8 +76,8 @@ h2 {
 	@media (min-height: 700px) {
 		.vertical-align();
 	}
-	
-	margin-top: 5px;	
+
+	margin-top: 5px;
 	background: linear-gradient(0deg,#FFF,#f6f9f9);
 }
 
