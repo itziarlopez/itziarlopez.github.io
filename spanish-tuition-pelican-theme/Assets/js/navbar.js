@@ -15,9 +15,12 @@ $(function() {
         if ($('.navbar-toggle').is(':visible') && $('.navbar-main-collapse').is(':visible'))
             $('.navbar-toggle').click();
 
-        var $anchor = $(this);
+        var $anchor = $(this),
+            targetEl = $($anchor.attr('href')),
+            offset = (targetEl.prop('tagName') === 'SECTION') ? 0 : 80;
+
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 80 // 70 pixesl for top navbar offset
+            scrollTop: targetEl.offset().top - offset
         }, 1500, 'jswing');
         event.preventDefault();
     });
